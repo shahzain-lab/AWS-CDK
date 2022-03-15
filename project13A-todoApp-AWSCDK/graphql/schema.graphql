@@ -4,12 +4,18 @@ type Todo {
   checked: Boolean!
 }
 
+input TodoInput {
+  id: String!
+  title: String!
+  checked: Boolean!
+}
+
 type Query {
   allTodos: [Todo]
 }
 
 type Mutation {
-  createTodo(id: String!): Todo
+  createTodo(todo: TodoInput!): Todo
   deleteTodo(id: String!): Todo
   # checkedTodo()
 }

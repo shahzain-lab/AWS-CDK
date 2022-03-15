@@ -19,7 +19,7 @@
             "ApiId"
           ]
         },
-        "Definition": "type Todo {\r\n  id: String!\r\n  title: String!\r\n  checked: Boolean!\r\n}\r\n\r\ntype Query {\r\n  allTodos: [Todo]\r\n}\r\n\r\ntype Mutation {\r\n  createTodo(id: String!): Todo\r\n  deleteTodo(id: String!): Todo\r\n  # checkedTodo()\r\n}\r\n"
+        "Definition": "type Todo {\r\n  id: String!\r\n  title: String!\r\n  checked: Boolean!\r\n}\r\n\r\ninput TodoInput {\r\n  id: String!\r\n  title: String!\r\n  checked: Boolean!\r\n}\r\n\r\ntype Query {\r\n  allTodos: [Todo]\r\n}\r\n\r\ntype Mutation {\r\n  createTodo(todo: TodoInput!): Todo\r\n  deleteTodo(id: String!): Todo\r\n  # checkedTodo()\r\n}\r\n"
       },
       "Metadata": {
         "aws:cdk:path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/Schema"
@@ -260,7 +260,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": {
-            "Ref": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3Bucket645BDA92"
+            "Ref": "AssetParametersa37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249edS3Bucket150D2294"
           },
           "S3Key": {
             "Fn::Join": [
@@ -273,7 +273,7 @@
                       "Fn::Split": [
                         "||",
                         {
-                          "Ref": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3VersionKey13C2C624"
+                          "Ref": "AssetParametersa37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249edS3VersionKeyA59E3A23"
                         }
                       ]
                     }
@@ -286,7 +286,7 @@
                       "Fn::Split": [
                         "||",
                         {
-                          "Ref": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3VersionKey13C2C624"
+                          "Ref": "AssetParametersa37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249edS3VersionKeyA59E3A23"
                         }
                       ]
                     }
@@ -318,7 +318,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "Project13ATodoAppAwscdkStack/lambdaAPIHandler/Resource",
-        "aws:asset:path": "asset.57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89",
+        "aws:asset:path": "asset.a37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249ed",
         "aws:asset:is-bundled": false,
         "aws:asset:property": "Code"
       }
@@ -362,17 +362,17 @@
     }
   },
   "Parameters": {
-    "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3Bucket645BDA92": {
+    "AssetParametersa37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249edS3Bucket150D2294": {
       "Type": "String",
-      "Description": "S3 bucket for asset \"57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89\""
+      "Description": "S3 bucket for asset \"a37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249ed\""
     },
-    "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3VersionKey13C2C624": {
+    "AssetParametersa37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249edS3VersionKeyA59E3A23": {
       "Type": "String",
-      "Description": "S3 key for asset version \"57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89\""
+      "Description": "S3 key for asset version \"a37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249ed\""
     },
-    "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89ArtifactHash01855808": {
+    "AssetParametersa37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249edArtifactHashF590F8D8": {
       "Type": "String",
-      "Description": "Artifact hash for asset \"57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89\""
+      "Description": "Artifact hash for asset \"a37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249ed\""
     }
   },
   "Conditions": {

@@ -47,7 +47,7 @@
                         "ApiId"
                       ]
                     },
-                    "definition": "type Todo {\r\n  id: String!\r\n  title: String!\r\n  checked: Boolean!\r\n}\r\n\r\ntype Query {\r\n  allTodos: [Todo]\r\n}\r\n\r\ntype Mutation {\r\n  createTodo(id: String!): Todo\r\n  deleteTodo(id: String!): Todo\r\n  # checkedTodo()\r\n}\r\n"
+                    "definition": "type Todo {\r\n  id: String!\r\n  title: String!\r\n  checked: Boolean!\r\n}\r\n\r\ninput TodoInput {\r\n  id: String!\r\n  title: String!\r\n  checked: Boolean!\r\n}\r\n\r\ntype Query {\r\n  allTodos: [Todo]\r\n}\r\n\r\ntype Mutation {\r\n  createTodo(todo: TodoInput!): Todo\r\n  deleteTodo(id: String!): Todo\r\n  # checkedTodo()\r\n}\r\n"
                   }
                 },
                 "constructInfo": {
@@ -439,7 +439,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3Bucket645BDA92"
+                        "Ref": "AssetParametersa37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249edS3Bucket150D2294"
                       },
                       "s3Key": {
                         "Fn::Join": [
@@ -452,7 +452,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3VersionKey13C2C624"
+                                      "Ref": "AssetParametersa37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249edS3VersionKeyA59E3A23"
                                     }
                                   ]
                                 }
@@ -465,7 +465,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3VersionKey13C2C624"
+                                      "Ref": "AssetParametersa37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249edS3VersionKeyA59E3A23"
                                     }
                                   ]
                                 }
@@ -507,13 +507,13 @@
             "id": "AssetParameters",
             "path": "Project13ATodoAppAwscdkStack/AssetParameters",
             "children": {
-              "57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89": {
-                "id": "57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89",
-                "path": "Project13ATodoAppAwscdkStack/AssetParameters/57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89",
+              "a37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249ed": {
+                "id": "a37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249ed",
+                "path": "Project13ATodoAppAwscdkStack/AssetParameters/a37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249ed",
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "Project13ATodoAppAwscdkStack/AssetParameters/57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89/S3Bucket",
+                    "path": "Project13ATodoAppAwscdkStack/AssetParameters/a37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249ed/S3Bucket",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.148.0"
@@ -521,7 +521,7 @@
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "Project13ATodoAppAwscdkStack/AssetParameters/57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89/S3VersionKey",
+                    "path": "Project13ATodoAppAwscdkStack/AssetParameters/a37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249ed/S3VersionKey",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.148.0"
@@ -529,7 +529,7 @@
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "Project13ATodoAppAwscdkStack/AssetParameters/57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89/ArtifactHash",
+                    "path": "Project13ATodoAppAwscdkStack/AssetParameters/a37aa82648420640ee5286d5cad0be0f2ccf28ec82d4113472bd5b3d52d249ed/ArtifactHash",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.148.0"
