@@ -1,0 +1,636 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.148.0"
+        }
+      },
+      "Project13ATodoAppAwscdkStack": {
+        "id": "Project13ATodoAppAwscdkStack",
+        "path": "Project13ATodoAppAwscdkStack",
+        "children": {
+          "TodoGraphqlapi": {
+            "id": "TodoGraphqlapi",
+            "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::AppSync::GraphQLApi",
+                  "aws:cdk:cloudformation:props": {
+                    "authenticationType": "API_KEY",
+                    "name": "Todos graphqlAPI"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-appsync.CfnGraphQLApi",
+                  "version": "1.148.0"
+                }
+              },
+              "Schema": {
+                "id": "Schema",
+                "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/Schema",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::AppSync::GraphQLSchema",
+                  "aws:cdk:cloudformation:props": {
+                    "apiId": {
+                      "Fn::GetAtt": [
+                        "TodoGraphqlapi5422B6FF",
+                        "ApiId"
+                      ]
+                    },
+                    "definition": "type Todo {\r\n  id: String!\r\n  title: String!\r\n  checked: Boolean!\r\n}\r\n\r\ntype Query {\r\n  allTodos: [Todo]\r\n}\r\n\r\ntype Mutation {\r\n  createTodo(id: String!): Todo\r\n  deleteTodo(id: String!): Todo\r\n  # checkedTodo()\r\n}\r\n"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-appsync.CfnGraphQLSchema",
+                  "version": "1.148.0"
+                }
+              },
+              "DefaultApiKey": {
+                "id": "DefaultApiKey",
+                "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/DefaultApiKey",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::AppSync::ApiKey",
+                  "aws:cdk:cloudformation:props": {
+                    "apiId": {
+                      "Fn::GetAtt": [
+                        "TodoGraphqlapi5422B6FF",
+                        "ApiId"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-appsync.CfnApiKey",
+                  "version": "1.148.0"
+                }
+              },
+              "lambdaDATASOURCE": {
+                "id": "lambdaDATASOURCE",
+                "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "appsync.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnRole",
+                          "version": "1.148.0"
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/ServiceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "lambda:InvokeFunction",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::GetAtt": [
+                                          "lambdaAPIHandlerE0B9BAFA",
+                                          "Arn"
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "TodoGraphqlapilambdaDATASOURCEServiceRoleDefaultPolicy96E32971",
+                                "roles": [
+                                  {
+                                    "Ref": "TodoGraphqlapilambdaDATASOURCEServiceRole21FD4497"
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                              "version": "1.148.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.Policy",
+                          "version": "1.148.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Role",
+                      "version": "1.148.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::AppSync::DataSource",
+                      "aws:cdk:cloudformation:props": {
+                        "apiId": {
+                          "Fn::GetAtt": [
+                            "TodoGraphqlapi5422B6FF",
+                            "ApiId"
+                          ]
+                        },
+                        "name": "lambdaDATASOURCE",
+                        "type": "AWS_LAMBDA",
+                        "lambdaConfig": {
+                          "lambdaFunctionArn": {
+                            "Fn::GetAtt": [
+                              "lambdaAPIHandlerE0B9BAFA",
+                              "Arn"
+                            ]
+                          }
+                        },
+                        "serviceRoleArn": {
+                          "Fn::GetAtt": [
+                            "TodoGraphqlapilambdaDATASOURCEServiceRole21FD4497",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-appsync.CfnDataSource",
+                      "version": "1.148.0"
+                    }
+                  },
+                  "QueryallTodosResolver": {
+                    "id": "QueryallTodosResolver",
+                    "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/QueryallTodosResolver",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/QueryallTodosResolver/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::AppSync::Resolver",
+                          "aws:cdk:cloudformation:props": {
+                            "apiId": {
+                              "Fn::GetAtt": [
+                                "TodoGraphqlapi5422B6FF",
+                                "ApiId"
+                              ]
+                            },
+                            "fieldName": "allTodos",
+                            "typeName": "Query",
+                            "dataSourceName": "lambdaDATASOURCE",
+                            "kind": "UNIT"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-appsync.CfnResolver",
+                          "version": "1.148.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-appsync.Resolver",
+                      "version": "1.148.0"
+                    }
+                  },
+                  "MutationcreateTodoResolver": {
+                    "id": "MutationcreateTodoResolver",
+                    "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/MutationcreateTodoResolver",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/MutationcreateTodoResolver/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::AppSync::Resolver",
+                          "aws:cdk:cloudformation:props": {
+                            "apiId": {
+                              "Fn::GetAtt": [
+                                "TodoGraphqlapi5422B6FF",
+                                "ApiId"
+                              ]
+                            },
+                            "fieldName": "createTodo",
+                            "typeName": "Mutation",
+                            "dataSourceName": "lambdaDATASOURCE",
+                            "kind": "UNIT"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-appsync.CfnResolver",
+                          "version": "1.148.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-appsync.Resolver",
+                      "version": "1.148.0"
+                    }
+                  },
+                  "MutationdeleteTodoResolver": {
+                    "id": "MutationdeleteTodoResolver",
+                    "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/MutationdeleteTodoResolver",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/MutationdeleteTodoResolver/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::AppSync::Resolver",
+                          "aws:cdk:cloudformation:props": {
+                            "apiId": {
+                              "Fn::GetAtt": [
+                                "TodoGraphqlapi5422B6FF",
+                                "ApiId"
+                              ]
+                            },
+                            "fieldName": "deleteTodo",
+                            "typeName": "Mutation",
+                            "dataSourceName": "lambdaDATASOURCE",
+                            "kind": "UNIT"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-appsync.CfnResolver",
+                          "version": "1.148.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-appsync.Resolver",
+                      "version": "1.148.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-appsync.LambdaDataSource",
+                  "version": "1.148.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-appsync.GraphqlApi",
+              "version": "1.148.0"
+            }
+          },
+          "lambdaAPIHandler": {
+            "id": "lambdaAPIHandler",
+            "path": "Project13ATodoAppAwscdkStack/lambdaAPIHandler",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "Project13ATodoAppAwscdkStack/lambdaAPIHandler/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "Project13ATodoAppAwscdkStack/lambdaAPIHandler/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.148.0"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "Project13ATodoAppAwscdkStack/lambdaAPIHandler/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "Project13ATodoAppAwscdkStack/lambdaAPIHandler/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "dynamodb:*",
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "dynamoTableA1BCE036",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Ref": "AWS::NoValue"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "lambdaAPIHandlerServiceRoleDefaultPolicy5A47A577",
+                            "roles": [
+                              {
+                                "Ref": "lambdaAPIHandlerServiceRoleD5D46357"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.148.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.148.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.148.0"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "Project13ATodoAppAwscdkStack/lambdaAPIHandler/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "Project13ATodoAppAwscdkStack/lambdaAPIHandler/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.148.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "Project13ATodoAppAwscdkStack/lambdaAPIHandler/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.148.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.148.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "Project13ATodoAppAwscdkStack/lambdaAPIHandler/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3Bucket645BDA92"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3VersionKey13C2C624"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3VersionKey13C2C624"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "lambdaAPIHandlerServiceRoleD5D46357",
+                        "Arn"
+                      ]
+                    },
+                    "environment": {
+                      "variables": {
+                        "TODOS_TABLE": {
+                          "Ref": "dynamoTableA1BCE036"
+                        }
+                      }
+                    },
+                    "handler": "main.handler",
+                    "runtime": "nodejs14.x"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.148.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.148.0"
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "Project13ATodoAppAwscdkStack/AssetParameters",
+            "children": {
+              "57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89": {
+                "id": "57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89",
+                "path": "Project13ATodoAppAwscdkStack/AssetParameters/57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "Project13ATodoAppAwscdkStack/AssetParameters/57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.148.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "Project13ATodoAppAwscdkStack/AssetParameters/57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.148.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "Project13ATodoAppAwscdkStack/AssetParameters/57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.148.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.148.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.148.0"
+            }
+          },
+          "dynamoTable": {
+            "id": "dynamoTable",
+            "path": "Project13ATodoAppAwscdkStack/dynamoTable",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "Project13ATodoAppAwscdkStack/dynamoTable/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "id",
+                        "keyType": "HASH"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "id",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "provisionedThroughput": {
+                      "readCapacityUnits": 5,
+                      "writeCapacityUnits": 5
+                    },
+                    "tableName": "TodosItems"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-dynamodb.CfnTable",
+                  "version": "1.148.0"
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "Project13ATodoAppAwscdkStack/dynamoTable/ScalingRole",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.148.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-dynamodb.Table",
+              "version": "1.148.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "Project13ATodoAppAwscdkStack/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "Project13ATodoAppAwscdkStack/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.148.0"
+                }
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "Project13ATodoAppAwscdkStack/CDKMetadata/Condition",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnCondition",
+                  "version": "1.148.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.148.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.148.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.148.0"
+    }
+  }
+}

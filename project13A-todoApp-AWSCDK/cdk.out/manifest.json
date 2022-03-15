@@ -1,0 +1,600 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "Project13ATodoAppAwscdkStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "Project13ATodoAppAwscdkStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/Project13ATodoAppAwscdkStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89",
+              "id": "57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89",
+              "packaging": "zip",
+              "sourceHash": "57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89",
+              "s3BucketParameter": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3Bucket645BDA92",
+              "s3KeyParameter": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3VersionKey13C2C624",
+              "artifactHashParameter": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89ArtifactHash01855808"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.ts:453:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:186:23)",
+              "LegacyStackSynthesizer.addFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:86:19)",
+              "Project13ATodoAppAwscdkStack.addFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:680:29)",
+              "E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:53",
+              "withoutDeprecationWarnings (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:218:12)",
+              "LegacyStackSynthesizer.addFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:14)",
+              "new Asset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:152:40)",
+              "AssetCode.bind (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:285:20)",
+              "new Function (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:683:29)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:22:27)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/TodoGraphqlapi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TodoGraphqlapi5422B6FF",
+            "trace": [
+              "new GraphqlApi (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi.ts:457:16)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:11:17)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/TodoGraphqlapi/Schema": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TodoGraphqlapiSchema336BC8EC",
+            "trace": [
+              "Schema.bind (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\schema.ts:80:21)",
+              "new GraphqlApi (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi.ts:473:39)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:11:17)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/TodoGraphqlapi/DefaultApiKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TodoGraphqlapiDefaultApiKeyB2940FFF",
+            "trace": [
+              "GraphqlApi.createAPIKey (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi.ts:629:12)",
+              "new GraphqlApi (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi.ts:479:34)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:11:17)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TodoGraphqlapilambdaDATASOURCEServiceRole21FD4497",
+            "trace": [
+              "new Role (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:358:18)",
+              "new BaseDataSource (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:112:47)",
+              "new BackedDataSource (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:160:5)",
+              "new LambdaDataSource (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:293:5)",
+              "GraphqlApi.addLambdaDataSource (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi-base.ts:208:12)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:44:26)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TodoGraphqlapilambdaDATASOURCEServiceRoleDefaultPolicy96E32971",
+            "trace": [
+              "new Policy (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:399:28)",
+              "Function.addToPrincipal (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:164:61)",
+              "Function.addToPrincipalOrResource (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:115:26)",
+              "Function.grantInvoke (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:352:25)",
+              "new LambdaDataSource (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:299:26)",
+              "GraphqlApi.addLambdaDataSource (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi-base.ts:208:12)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:44:26)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TodoGraphqlapilambdaDATASOURCE7B38F33C",
+            "trace": [
+              "new BaseDataSource (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:116:15)",
+              "new BackedDataSource (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:160:5)",
+              "new LambdaDataSource (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:293:5)",
+              "GraphqlApi.addLambdaDataSource (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi-base.ts:208:12)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:44:26)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/QueryallTodosResolver/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TodoGraphqlapilambdaDATASOURCEQueryallTodosResolver3B2A19A2",
+            "trace": [
+              "new Resolver (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\resolver.ts:108:21)",
+              "LambdaDataSource.createResolver (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:131:12)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:47:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/MutationcreateTodoResolver/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TodoGraphqlapilambdaDATASOURCEMutationcreateTodoResolverB078774D",
+            "trace": [
+              "new Resolver (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\resolver.ts:108:21)",
+              "LambdaDataSource.createResolver (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:131:12)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:52:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/TodoGraphqlapi/lambdaDATASOURCE/MutationdeleteTodoResolver/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TodoGraphqlapilambdaDATASOURCEMutationdeleteTodoResolver5D64A42F",
+            "trace": [
+              "new Resolver (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\resolver.ts:108:21)",
+              "LambdaDataSource.createResolver (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:131:12)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:57:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/lambdaAPIHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaAPIHandlerServiceRoleD5D46357",
+            "trace": [
+              "new Role (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:358:18)",
+              "new Function (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:663:31)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:22:27)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/lambdaAPIHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaAPIHandlerServiceRoleDefaultPolicy5A47A577",
+            "trace": [
+              "new Policy (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:399:28)",
+              "Function.addToPrincipal (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-dynamodb\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:164:61)",
+              "Table.combinedGrant (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.ts:994:29)",
+              "Table.grantFullAccess (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.ts:767:17)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:38:16)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/lambdaAPIHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaAPIHandlerE0B9BAFA",
+            "trace": [
+              "new Function (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:741:35)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:22:27)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/AssetParameters/57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3Bucket645BDA92",
+            "trace": [
+              "new FileAssetParameters (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:169:16)",
+              "LegacyStackSynthesizer.addFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:86:19)",
+              "Project13ATodoAppAwscdkStack.addFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:680:29)",
+              "E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:53",
+              "withoutDeprecationWarnings (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:218:12)",
+              "LegacyStackSynthesizer.addFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:14)",
+              "new Asset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:152:40)",
+              "AssetCode.bind (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:285:20)",
+              "new Function (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:683:29)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:22:27)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/AssetParameters/57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89S3VersionKey13C2C624",
+            "trace": [
+              "new FileAssetParameters (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:169:16)",
+              "LegacyStackSynthesizer.addFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:86:19)",
+              "Project13ATodoAppAwscdkStack.addFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:680:29)",
+              "E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:53",
+              "withoutDeprecationWarnings (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:218:12)",
+              "LegacyStackSynthesizer.addFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:14)",
+              "new Asset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:152:40)",
+              "AssetCode.bind (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:285:20)",
+              "new Function (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:683:29)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:22:27)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/AssetParameters/57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters57703c93911973659830cb214a557b3e17cc0c21a8df0e7f993c7ecea2843b89ArtifactHash01855808",
+            "trace": [
+              "new FileAssetParameters (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:169:16)",
+              "LegacyStackSynthesizer.addFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:86:19)",
+              "Project13ATodoAppAwscdkStack.addFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:680:29)",
+              "E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:53",
+              "withoutDeprecationWarnings (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:218:12)",
+              "LegacyStackSynthesizer.addFileAsset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:14)",
+              "new Asset (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:152:40)",
+              "AssetCode.bind (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:285:20)",
+              "new Function (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:683:29)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:22:27)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/dynamoTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "dynamoTableA1BCE036"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.ts:453:92)",
+              "new Table (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.ts:1210:38)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:29:24)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/dynamoTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dynamoTableA1BCE036",
+            "trace": [
+              "new Table (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.ts:1180:18)",
+              "new Project13ATodoAppAwscdkStack (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\lib\\project13_a-todo_app-awscdk-stack.ts:29:24)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\bin\\project13_a-todo_app-awscdk.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.ts:22:24)",
+              "E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:166:5",
+              "visit (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:231:5)",
+              "visit (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:227:5)",
+              "injectMetadataResources (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:157:3)",
+              "Object.synthesize (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:18:3)",
+              "App.synth (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stage.ts:180:23)",
+              "process.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\app.ts:131:45)",
+              "Object.onceWrapper (events.js:520:26)",
+              "process.emit (events.js:400:28)",
+              "process.emit (domain.js:475:12)",
+              "process.emit (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\source-map-support\\source-map-support.js:516:21)"
+            ]
+          }
+        ],
+        "/Project13ATodoAppAwscdkStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.ts:31:27)",
+              "E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:166:5",
+              "visit (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:231:5)",
+              "visit (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:227:5)",
+              "injectMetadataResources (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:157:3)",
+              "Object.synthesize (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:18:3)",
+              "App.synth (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\stage.ts:180:23)",
+              "process.<anonymous> (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\@aws-cdk\\core\\lib\\app.ts:131:45)",
+              "Object.onceWrapper (events.js:520:26)",
+              "process.emit (events.js:400:28)",
+              "process.emit (domain.js:475:12)",
+              "process.emit (E:\\AWS-CDK\\project13A-todoApp-AWSCDK\\node_modules\\source-map-support\\source-map-support.js:516:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "Project13ATodoAppAwscdkStack"
+    }
+  }
+}
