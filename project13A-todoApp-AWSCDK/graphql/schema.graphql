@@ -17,5 +17,4 @@ type Query {
 type Mutation {
   createTodo(todo: TodoInput!): Todo
   deleteTodo(id: String!): Todo
-  # checkedTodo()
 }

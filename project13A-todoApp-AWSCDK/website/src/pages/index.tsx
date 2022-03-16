@@ -1,52 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { API } from 'aws-amplify';
-import { allTodos } from "../graphql/queries";
-import shortid from 'shortid';
-import { createTodo } from "../graphql/mutations";
+import React, { useState } from "react";
+import LeftSide from '../components/LeftSide'
+import RightSide from '../components/RightSide'
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 
 export default function Home() {
-  const [title, setTitle] = useState('');
-  const [checked, setChecked] = useState(false);
-
-
-  const onSubmit = async () => {
-    const todo = {
-      id: shortid.generate(),
-      title,
-      checked
-    }
-    await createTodo
-  }
-
-  const fetchData = async () => {
-    try {
-      const data = await API.graphql({
-        query: allTodos
-      })
-      console.log('data', data);
-    } catch (err) {
-      console.log("err", err);
-    }
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, [])
+  const [isSubmit, setIsSubmit] = useState(false)
 
   return (
     <div className="container">
-      <div>
-        <form>
-          <input
-            type="text"
-            required
-            value={title}
-            onChange={e => setTitle(e.target.value)}
-          />
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-      <div></div>
+      <Typography variant="h3" sx={{ textAlign: 'center' }}>CDK TodoList</Typography>
+      <Box
+        sx={{ display: "flex", width: '100%' }}
+      >
+        <LeftSide setIsSubmit={setIsSubmit} />
+        <RightSide isSubmit={isSubmit} setIsSubmit={setIsSubmit} />
+      </Box>
     </div>)
 }

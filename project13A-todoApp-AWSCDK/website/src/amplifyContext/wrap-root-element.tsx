@@ -2,7 +2,7 @@ import React, { ReactNode } from "react"
 import AmplifyClient from "./client"
 import '../../styles/global.css';
 
-interface props {
+type props = {
   element: ReactNode
 }
 
