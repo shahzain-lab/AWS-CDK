@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib/core';
 import { Project13ATodoAppAwscdkStack } from '../lib/project13_a-todo_app-awscdk-stack';
 
 const app = new cdk.App();
