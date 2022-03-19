@@ -1,0 +1,14 @@
+{
+  "name": "fullstack_deployment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cdk-build": "cd aws-cdk && npm run build"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "",
+  "license": "ISC"
+}
