@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-bookmarkclient-dev-140653-authRole",
+      "UnauthRoleArn": "arn:aws:iam::400341361615:role/amplify-bookmarkclient-dev-140653-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::400341361615:role/amplify-bookmarkclient-dev-140653-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-bookmarkclient-dev-140653-deployment",
+      "UnauthRoleName": "amplify-bookmarkclient-dev-140653-unauthRole",
+      "StackName": "amplify-bookmarkclient-dev-140653",
+      "StackId": "arn:aws:cloudformation:us-east-1:400341361615:stack/amplify-bookmarkclient-dev-140653/84e9dee0-a7c8-11ec-a275-0ae735d04667",
+      "AmplifyAppId": "dh1p5p7tovxz"
+    }
+  }
+}

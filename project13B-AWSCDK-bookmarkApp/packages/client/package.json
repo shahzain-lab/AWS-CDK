@@ -18,7 +18,12 @@
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.5.1",
     "@mui/material": "^5.5.1",
+    "@types/node": "^17.0.21",
+    "@types/react": "^17.0.41",
+    "@types/react-dom": "^17.0.14",
+    "aws-amplify": "^4.3.16",
     "gatsby": "^4.10.0",
+    "gatsby-plugin-typescript": "^4.10.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
