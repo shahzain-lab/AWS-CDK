@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "cdk-build": "cd aws-cdk && npm run build",
+    "cdk-deploy": "cd aws-cdk && cdk deploy",
     "global-install": "yarn install --packages/client && cd aws-cdk && yarn install"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {}
