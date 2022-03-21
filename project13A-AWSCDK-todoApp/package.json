@@ -1,0 +1,17 @@
+{
+  "name": "project13b-awscdk-bookmarkapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cdk-build": "cd aws-cdkApp && npm run build",
+    "cdk-deploy": "cd aws-cdkApp && cdk deploy",
+    "global-install": "yarn install --packages/client && cd aws-cdkApp && yarn install"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
