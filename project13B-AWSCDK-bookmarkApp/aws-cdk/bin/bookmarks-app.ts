@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { AwsCdkStack } from '../lib/aws-cdk-stack';
+import { BookmarksAppStack } from '../lib/bookmarks-app-stack';
 
 const app = new cdk.App();
-new AwsCdkStack(app, 'AwsCdkStack', {
+new BookmarksAppStack(app, 'BookmarksAppStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
