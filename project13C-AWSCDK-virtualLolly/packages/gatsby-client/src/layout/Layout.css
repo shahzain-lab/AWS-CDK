@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Yellowtail&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.layout--box {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(33, 33, 43);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* /new lolly page// */
+
+.lolly--page {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.lolly--lollypicker {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lolly--clrpicker {
+  display: flex;
+  flex-direction: column;
+}
+.colorPickerLabel {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 20px;
+  overflow: hidden;
+}
+.colorPicker {
+  width: 80px;
+  height: 80px;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.lolly--form {
+  background-color: #101024;
+  padding: 2rem;
+  border-radius: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #aaaaaa;
+}
+.nameFields {
+  width: 400px;
+  padding: 2px 10px;
+  outline: none;
+  border: 2px solid #fa73d9;
+  border-radius: 12px;
+  background-color: #2c2c2c;
+  color: aliceblue;
+  font-size: 1.2rem;
+}
+
+.nameLabled {
+  color: white;
+  margin-top: 1rem;
+}
+
+.btn--lolly {
+  margin-top: 1em;
+  box-shadow: #fa73d9 0 0 6px;
+  border: solid 2px #fa73d9;
+  background-color: transparent;
+  font-size: 0.9em;
+  color: #fa73d9;
+  padding: 1em 2em;
+  font-weight: 600;
+  border-radius: 4em;
+  cursor: pointer;
+  transition: all 0.3s;
+}

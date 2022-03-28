@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Yellowtail&display=swap");
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.title {
+  font-family: "Yellowtail", cursive;
+  font-size: 4em;
+  padding-top: 1em;
+  margin-bottom: 0.2em;
+  line-height: 1;
+}
+
+@media (min-width: 740px) {
+  .title {
+    font-size: 4.5em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 5em;
+  }
+}
+
+.title a {
+  font-weight: 300;
+  color: #f6d0ed;
+  border-bottom-style: none;
+  text-shadow: #fa73d9 0 0 8px;
+}
+
+.title a:hover,
+.title a:focus {
+  text-shadow: #fa73d9 0 0 16px;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #ddd;
+  text-shadow: #fa73d9 1px 1px 4px;
+  margin-top: 1.5em;
+  margin-bottom: 3em;
+  line-height: 1.2;
+}
+
+.header--lolly {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  color: #fa73d9;
+}
+footer a:link,
+footer a:visited {
+  color: #fa73d9;
+  border-bottom: solid 1px #a3137f;
+}
+footer a:hover,
+footer a:focus {
+  color: #ca47a9;
+  border-bottom: solid 1px #fa73d9;
+}
+
+.btn--lolly:hover {
+  color: #000;
+  background-color: #fa73d9;
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

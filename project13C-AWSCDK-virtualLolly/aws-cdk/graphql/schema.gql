@@ -1,0 +1,22 @@
+ type Lolly{
+    recName: String!
+    message: String!
+    senderName: String!
+    flavorTop: String!
+    flavorMiddle: String!
+    flavorBottom: String!
+    slug: String!
+  }
+  type Query {
+    allLollies: [Lolly]!
+  }
+  type Mutation{
+    createLolly(
+    recName: String!
+    message: String!
+    senderName: String!
+    flavorTop: String!
+    flavorMiddle: String!
+    flavorBottom: String!
+    ): Lolly
+  }
