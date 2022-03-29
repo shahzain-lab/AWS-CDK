@@ -16,7 +16,7 @@ export class VirtualLolliesStack extends cdk.Stack {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.API_KEY,
           apiKeyConfig: {
-            expires: cdk.Expiration.after(cdk.Duration.days(365))
+            expires: cdk.Expiration.after(cdk.Duration.days(360))
           }
         }
       }
