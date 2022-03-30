@@ -10,6 +10,7 @@ export const createLolly = /* GraphQL */ `
     $flavorTop: String!
     $flavorMiddle: String!
     $flavorBottom: String!
+    $slug: String!
   ) {
     createLolly(
       recName: $recName
@@ -18,6 +19,7 @@ export const createLolly = /* GraphQL */ `
       flavorTop: $flavorTop
       flavorMiddle: $flavorMiddle
       flavorBottom: $flavorBottom
+      slug: $slug
     ) {
       recName
       message

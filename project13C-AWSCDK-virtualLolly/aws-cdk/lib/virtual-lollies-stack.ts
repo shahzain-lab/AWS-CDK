@@ -3,10 +3,14 @@ import { Construct } from 'constructs';
 import * as appsync from '@aws-cdk/aws-appsync-alpha';
 import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
 
-
 export class VirtualLolliesStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
+
+  
+
+    //************Backend API******************** */
+
 
     // graphql client side api powered by appsync
     const api = new appsync.GraphqlApi(this, 'graphqlVirtuallollyApi', {

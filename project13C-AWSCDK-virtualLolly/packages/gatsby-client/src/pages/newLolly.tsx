@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../layout/Layout';
 import Lolly from '../components/Lolly';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
@@ -7,47 +7,50 @@ import shortid from 'shortid';
 import { navigate } from 'gatsby';
 import {API} from 'aws-amplify'
 import { createLolly } from '../graphql/mutations';
+import { allLollies } from '../graphql/queries';
+
+interface Message {
+    to: string
+    message: string
+    from: string
+}
 
 
 const NewLolly = () => {
     const [clr1, setclr1] = useState('#fa43d2')
     const [clr2, setclr2] = useState("#fac219")
     const [clr3, setclr3] = useState("#fa73d9")
-    // const [lollies, setLollies] = useState()
+    const [lollies, setLollies] = useState({})
 
-    const onSubmit = async (values: any, actions: any) => {
-      try{
-         const slug = shortid.generate();
-        console.log(slug);
-        const result = await API.graphql({
-          query: createLolly,
-            variables: {
-                recName: values.to,
-                message: values.message,
-                senderName: values.from,
-                flavorTop: clr1,
-                flavorMiddle: clr2,
-                flavorBottom: clr3,
-                slug: slug,
-            },
-        });
-        console.log(result);
-        // setLollies(result)
-        await actions.resetForm({
-            values: {
-                to: "",
-                message: "",
-                from: "",
-            },
-        });
-        navigate(`/lollies/${slug}`)
-
-
-      }catch(err){
-        return <h1>Error could'nt create {err}</h1>
-      }
-       
+    const submitHandler = async (values: Message, actions: any) => {
+            console.log(values);    
+             const slug = shortid.generate();
+            console.log(slug);
+            const result = await API.graphql({
+              query: createLolly,
+                variables: {
+                    recName: values.to,
+                    message: values.message,
+                    senderName: values.from,
+                    flavorTop: clr1,
+                    flavorMiddle: clr2,
+                    flavorBottom: clr3,
+                    slug: slug
+                },
+            });
+            console.log(result);
+            setLollies(result)
+            await actions.resetForm({
+                values: {
+                    to: "",
+                    message: "",
+                    from: "",
+                },
+            });
+            navigate(`/ice-cream/${slug}`)
+    
     }
+    
     return <Layout>
         <div className='lolly--page'>
             <div className='lolly--lollypicker'>
@@ -75,7 +78,7 @@ const NewLolly = () => {
                             .required('Required'),
                         from: Yup.string().required('Name is Required'),
                     })}
-                    onSubmit={onSubmit}
+                    onSubmit={submitHandler}
                 >
                     <Form
                         className='lolly--form'>

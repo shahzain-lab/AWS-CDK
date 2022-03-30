@@ -1,6 +1,5 @@
 import React from "react"
-import AmplifyClient from "./client"
-import '../styles/global.css';
+import AmplifyClient from "./client";
 
 
 export const wrapRootElement = ({ element }) => (<AmplifyClient>{element}</AmplifyClient>);
