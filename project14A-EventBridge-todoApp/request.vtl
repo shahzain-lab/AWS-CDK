@@ -1,0 +1,19 @@
+{
+    "version": "2021-08-02",
+    "method": "POST",
+    "resourcePath": "/",
+    "headers": {
+        "content-type": "application/x-amz-json-1.1",
+        "x-amz-target":"AWSEvents.PutEvents"
+    },
+    "body": {
+        "Entries": [
+            {
+                "Source":"eru-appsync-events",
+                "EventBusName": "default",
+                "Detail":"{ \"event\": \"$ctx.arguments.event\"}",
+                "DetailType":"Event Bridge via GraphQL"
+            }
+        ]
+    }
+}
