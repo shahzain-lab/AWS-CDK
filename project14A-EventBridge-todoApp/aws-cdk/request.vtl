@@ -1,8 +1,9 @@
 {
-    "version": "2021-08-02",
+    "version": "2018-05-29",
     "method": "POST",
     "resourcePath": "/",
-    "headers": {
+    "params": {
+        "headers": {
         "content-type": "application/x-amz-json-1.1",
         "x-amz-target":"AWSEvents.PutEvents"
     },
@@ -11,9 +12,11 @@
             {
                 "Source":"eru-appsync-events",
                 "EventBusName": "default",
-                "Detail":"{ \"event\": \"$ctx.arguments.event\"}",
+                "Detail":"{ \"todo\": \"$ctx.arguments.todo\"}",
                 "DetailType":"Event Bridge via GraphQL"
             }
         ]
     }
+    }
+    
 }

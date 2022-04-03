@@ -5,7 +5,6 @@ type Todo {
 }
 
 input TodoInput {
-  id: String!
   title: String!
   checked: Boolean!
 }
