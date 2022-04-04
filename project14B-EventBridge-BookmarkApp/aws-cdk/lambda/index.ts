@@ -33,7 +33,12 @@ export const handler = async (event: any) => {
             const params = {
                 TableName: TABLE_NAME,
                 Key: event.detail.id,
-                Item: event.detail
+                UpdateExpression: 'set title = :t, url = :url',
+                 ExpressionAttributeValues:{
+                    ":t": event.detail.title,
+                    ":p": event.detail.url,
+                },
+                ReturnValues:"UPDATED_NEW"
             }
             await documentClient.update(params).promise()
          }

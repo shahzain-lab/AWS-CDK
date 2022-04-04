@@ -1,12 +1,16 @@
 import * as cdk from 'aws-cdk-lib';
-import { Construct } from 'constructs';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
 import * as appsync from '@aws-cdk/aws-appsync-alpha';
 import * as events from 'aws-cdk-lib/aws-events';
 import * as targets from 'aws-cdk-lib/aws-events-targets';
+import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
+import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
 import { EVENT_SOURCE, requestTemplate, responseTemplate } from '../utils/appsync-templates';
-
+import { Construct } from 'constructs';
+import { join } from 'path';
 
 export class Project14BEventBridgeBookmarkAppStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -14,6 +18,36 @@ export class Project14BEventBridgeBookmarkAppStack extends cdk.Stack {
 
 
     
+    //************Frontend Deployment******************************* */
+
+    // Storage bucket for frontend assets
+    const websiteBucket = new s3.Bucket(this, 'bookmark-web-bucket', {
+      publicReadAccess: true,
+      versioned: true,
+      websiteIndexDocument: 'index.html',
+    })
+
+    // CDN distribution from origin
+    const distribution = new cloudfront.Distribution(this, 'bookmark-dist', {
+      defaultBehavior: {
+        origin: new origins.S3Origin(websiteBucket)
+      }
+    })
+
+    // Print domain to console
+    new cdk.CfnOutput(this, 'print-domainName', {
+      value: distribution.domainName
+    })
+
+    // deploying bucket
+    new s3deploy.BucketDeployment(this, 'deploy-bookmarkDeploy', {
+      sources: [s3deploy.Source.asset(join('__dirname', '/../../', 'packages/gatsby-client/public'))],
+      destinationBucket: websiteBucket,
+      distribution: distribution
+    })
+
+    //************Backend API******************** */
+
     // APPSYNC GRAPHQL API
     const api = new appsync.GraphqlApi(this, 'GRAPHQLAPIBookmaks', {
       name: 'bookmarkApp-eventBridge',
