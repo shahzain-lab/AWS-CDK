@@ -74,19 +74,15 @@ export class Project14AEventBridgeTodoAppStack extends cdk.Stack {
 
     //  HTTPS_DS MUTATIONS
     const mutations = ["createTodo", "deleteTodo"];
-
     mutations.forEach((mut: string) => {
-
       let details = `\\\"id\\\": \\\"$ctx.args.id\\\"`;
-      
       if(mut === "createTodo"){
         details = `\\\"title\\\":\\\"$ctx.args.todo.title\\\" , \\\"checked\\\":\\\"$ctx.args.todo.checked\\\"`
       }else if (mut === "deleteTodo") {
         details = `\\\"id\\\":\\\"$ctx.args.id\\\"`
       }
-      
       httpsDS.createResolver({
-        typeName: "Mutation",
+        typeName: 'Mutation',
         fieldName: mut,
         requestMappingTemplate: appsync.MappingTemplate.fromString(requestTemplate(details, mut)),
         responseMappingTemplate: appsync.MappingTemplate.fromString(responseTemplate())

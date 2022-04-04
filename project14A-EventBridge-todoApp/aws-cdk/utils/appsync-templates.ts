@@ -1,5 +1,5 @@
 
-
+export const EVENT_SOURCE = "Bookmark-appsync-events"
 
 export const requestTemplate = (details: string, detailType: string) => {
     return `{
@@ -15,7 +15,7 @@ export const requestTemplate = (details: string, detailType: string) => {
             "Entries":[
               {
                 "DetailType":"${detailType}",
-                "Source":"eru-appsync-events",
+                "Source": "${EVENT_SOURCE}",
                 "EventBusName": "default",
                 "Detail": "{${details}}"
               }
