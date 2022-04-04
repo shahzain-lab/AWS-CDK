@@ -15,6 +15,7 @@ export const handler = async (event: any) => {
                 Item: { id: 'mk' + (Math.random() * 1000), ...event.detail},
             }
             await docClient.put(params).promise();
+            return event.detail
         }
 
         //////////////  deleting todo /////////////////////////
@@ -25,6 +26,7 @@ export const handler = async (event: any) => {
                 Key: { id: event.detail.id },
             }
             await docClient.delete(params).promise();
+            return event.detail.id
         }
     }
     catch (error) {

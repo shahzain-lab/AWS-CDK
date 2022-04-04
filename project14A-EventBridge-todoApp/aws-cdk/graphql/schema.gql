@@ -1,5 +1,5 @@
 type Todo {
-  id: String!
+  id: String
   title: String!
   checked: Boolean!
 }
