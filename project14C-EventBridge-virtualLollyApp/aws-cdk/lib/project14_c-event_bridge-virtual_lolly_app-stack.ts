@@ -8,11 +8,46 @@ import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
 import * as lambda from 'aws-cdk-lib/aws-lambda'
 import * as events from 'aws-cdk-lib/aws-events'
 import * as eventsTargets from 'aws-cdk-lib/aws-events-targets'
+import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
+import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
+import { join } from 'path';
 import { EVENT_SOURCE, requestTemplate, responseTemplate } from '../utils/appsync-templates';
 
 export class Project14CEventBridgeVirtualLollyAppStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
+
+
+
+  //  *******************(FrontEnd deployment)*******************
+
+    // Storage bucket for frontend assets
+    const websiteBucket = new s3.Bucket(this, 'website-storage-bucket', {
+      publicReadAccess: true,
+      versioned: true,
+      websiteIndexDocument: 'index.html',
+    })
+
+    // CDN distribution from origin
+    const distribution = new cloudfront.Distribution(this, 'dist', {
+      defaultBehavior: {
+        origin: new origins.S3Origin(websiteBucket)
+      }
+    })
+
+    // Print domain to console
+    new cdk.CfnOutput(this, 'print-domainName', {
+      value: distribution.domainName
+    })
+
+    // deploying bucket
+    new s3deploy.BucketDeployment(this, 'bucketDeploy', {
+      sources: [s3deploy.Source.asset(join('__dirname', '/../../', 'packages/client/public'))],
+      destinationBucket: websiteBucket,
+      distribution: distribution
+    })
 
 //  *******************(backend APIs)*******************
 
