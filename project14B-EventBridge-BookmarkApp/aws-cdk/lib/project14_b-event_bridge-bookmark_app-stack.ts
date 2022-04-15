@@ -9,6 +9,7 @@ import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
 import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
 import { EVENT_SOURCE, requestTemplate, responseTemplate } from '../utils/appsync-templates';
+
 import { Construct } from 'constructs';
 import { join } from 'path';
 
